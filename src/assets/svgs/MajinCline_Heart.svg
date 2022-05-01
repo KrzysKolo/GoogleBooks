@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2" viewBox="0 0 510 450" version="1.0">
+  <defs id="defs4">
+    <linearGradient id="linearGradient3267" y2="589.07" gradientUnits="userSpaceOnUse" x2="368.5" gradientTransform="translate(28,26)" y1="609.07" x1="221.56">
+      <stop id="stop3263" stop-color="#fff" offset="0"/>
+      <stop id="stop3265" stop-color="#fff" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3345" y2="575.36" gradientUnits="userSpaceOnUse" x2="482.33" gradientTransform="translate(28,26)" y1="649.36" x1="574">
+      <stop id="stop3341" stop-color="#560000" offset="0"/>
+      <stop id="stop3343" stop-color="#560000" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <radialGradient id="radialGradient3395" gradientUnits="userSpaceOnUse" cy="622.85" cx="450" gradientTransform="matrix(1 0 0 2.9336 28 -1178.4)" r="52.5">
+      <stop id="stop3391" stop-color="#560000" stop-opacity=".69369" offset="0"/>
+      <stop id="stop3397" stop-color="#fff" stop-opacity=".49804" offset=".5"/>
+      <stop id="stop3393" stop-color="#560000" stop-opacity=".48649" offset="1"/>
+    </radialGradient>
+    <filter id="filter3451" y="-.049255" width="1.2908" height="1.0985" x="-.14541">
+      <feGaussianBlur id="feGaussianBlur3453" stdDeviation="6.3011828"/>
+    </filter>
+    <filter id="filter3475">
+      <feGaussianBlur id="feGaussianBlur3477" stdDeviation="10.744652"/>
+    </filter>
+    <filter id="filter3507" y="-.063943" width="1.2084" height="1.1279" x="-.10418">
+      <feGaussianBlur id="feGaussianBlur3509" stdDeviation="8.6855604"/>
+    </filter>
+    <filter id="filter3567" y="-.087605" width="1.2785" height="1.1752" x="-.13925">
+      <feGaussianBlur id="feGaussianBlur3569" stdDeviation="11.629121"/>
+    </filter>
+    <filter id="filter3328" y="-.18642" width="1.3743" height="1.3728" x="-.18716">
+      <feGaussianBlur id="feGaussianBlur3330" stdDeviation="1.0292151"/>
+    </filter>
+    <filter id="filter3364" y="-.12769" width="1.3174" height="1.2554" x="-.15868">
+      <feGaussianBlur id="feGaussianBlur3366" stdDeviation="0.82814092"/>
+    </filter>
+    <linearGradient id="linearGradient3372" y2="515.39" gradientUnits="userSpaceOnUse" x2="398.26" gradientTransform="translate(.375 -.875)" y1="508.36" x1="398">
+      <stop id="stop3198" stop-color="#fff" offset="0"/>
+      <stop id="stop3200" stop-color="#560000" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3374" y2="506.11" gradientUnits="userSpaceOnUse" x2="390.75" gradientTransform="translate(.125 -1.625)" y1="510.24" x1="397.05">
+      <stop id="stop3182" stop-color="#560000" offset="0"/>
+      <stop id="stop3184" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3203" y2="568.36" gradientUnits="userSpaceOnUse" x2="330" gradientTransform="translate(72 199)" y1="622.36" x1="358">
+      <stop id="stop3199" offset="0"/>
+      <stop id="stop3201" stop-color="#f00" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <filter id="filter3284" y="-.15765" width="1.2217" height="1.3153" x="-.11087">
+      <feGaussianBlur id="feGaussianBlur3286" stdDeviation="6.6338534"/>
+    </filter>
+    <filter id="filter3281">
+      <feGaussianBlur id="feGaussianBlur3283" stdDeviation="16.206164"/>
+    </filter>
+  </defs>
+  <g id="layer1" transform="translate(-180.27 -419.94)">
+    <path id="rect3194" opacity=".71635" filter="url(#filter3475)" d="m342.37 460.37c-7.82 0.03-15.64 0.59-20.72 1.65-42.17 8.79-73.73 38.43-85.22 80-2.57 9.31-2.76 11.31-2.75 29 0.01 16.17 0.34 20.55 2.31 29.38 4.55 20.42 11.68 36.84 24 55.22 14.52 21.66 35.84 43.83 79.16 82.31 56 49.74 81.75 75.97 105.34 107.31 2.96 3.93 5.74 7.18 6.78 7.97 2.37-1.64 5.01-5.29 7.06-7.97 23.6-31.34 49.34-57.57 105.35-107.31 43.32-38.48 64.63-60.65 79.15-82.31 12.32-18.38 19.46-34.8 24-55.22 1.97-8.83 2.31-13.21 2.32-29.38 0.01-17.69-0.18-19.69-2.75-29-11.49-41.57-43.06-71.21-85.22-80-5.09-1.06-12.9-1.62-20.72-1.65-7.82-0.04-15.65 0.45-20.78 1.47-26.77 5.3-50.99 20.49-67.16 42.09-3.35 4.48-9.18 14.5-13.03 22.41-3.64 7.47-6.93 13.19-7.94 13.87-3.59-3.93-5.88-9.05-8.22-13.87-3.85-7.91-9.67-17.93-13.03-22.41-16.17-21.6-40.38-36.79-67.15-42.09-5.13-1.02-12.96-1.51-20.78-1.47z" fill="#560000"/>
+    <path id="path2435" opacity=".45575" filter="url(#filter3281)" d="m316.95 445.94c-7.82 0.04-15.63 0.6-20.72 1.66-42.16 8.78-73.72 38.42-85.21 80-2.58 9.31-2.76 11.31-2.75 29 0 16.16 0.34 20.54 2.31 29.37 4.55 20.43 11.68 36.84 24 55.22 14.52 21.66 35.84 43.84 79.15 82.31 56.01 49.75 81.76 75.97 105.35 107.32 2.96 3.93 5.74 7.18 6.78 7.96 2.37-1.64 5.01-5.29 7.06-7.96 23.59-31.35 49.34-57.57 105.35-107.32 43.31-38.47 64.63-60.65 79.15-82.31 12.32-18.38 19.45-34.79 24-55.22 1.97-8.83 2.31-13.21 2.31-29.37 0.01-17.69-0.17-19.69-2.75-29-11.49-41.58-43.05-71.22-85.21-80-5.09-1.06-12.9-1.62-20.72-1.66-7.82-0.03-15.65 0.45-20.78 1.47-26.77 5.3-50.99 20.49-67.16 42.09-3.35 4.48-9.18 14.51-13.03 22.41-3.65 7.48-6.93 13.2-7.94 13.87-3.6-3.93-5.88-9.05-8.22-13.87-3.85-7.9-9.68-17.93-13.03-22.41-16.17-21.6-40.39-36.79-67.16-42.09-5.13-1.02-12.96-1.5-20.78-1.47z" fill="#fff"/>
+    <path id="path3225" d="m320.95 447.94c-7.82 0.04-15.63 0.6-20.72 1.66-42.16 8.78-73.72 38.42-85.21 80-2.58 9.31-2.76 11.31-2.75 29 0 16.16 0.34 20.54 2.31 29.37 4.55 20.43 11.68 36.84 24 55.22 14.52 21.66 35.84 43.84 79.15 82.31 56.01 49.75 81.76 75.97 105.35 107.32 2.96 3.93 5.74 7.18 6.78 7.96 2.37-1.64 5.01-5.29 7.06-7.96 23.59-31.35 49.34-57.57 105.35-107.32 43.31-38.47 64.63-60.65 79.15-82.31 12.32-18.38 19.45-34.79 24-55.22 1.97-8.83 2.31-13.21 2.31-29.37 0.01-17.69-0.17-19.69-2.75-29-11.49-41.58-43.05-71.22-85.21-80-5.09-1.06-12.9-1.62-20.72-1.66-7.82-0.03-15.65 0.45-20.78 1.47-26.77 5.3-50.99 20.49-67.16 42.09-3.35 4.48-9.18 14.51-13.03 22.41-3.65 7.48-6.93 13.2-7.94 13.87-3.6-3.93-5.88-9.05-8.22-13.87-3.85-7.9-9.68-17.93-13.03-22.41-16.17-21.6-40.39-36.79-67.16-42.09-5.13-1.02-12.96-1.5-20.78-1.47z" fill="#f00"/>
+    <path id="path2425" opacity=".20673" d="m320.95 447.94c-7.82 0.04-15.63 0.6-20.72 1.66-42.16 8.78-73.72 38.42-85.21 80-2.58 9.31-2.76 11.31-2.75 29 0 16.16 0.34 20.54 2.31 29.37 4.55 20.43 11.68 36.84 24 55.22 14.52 21.66 35.84 43.84 79.15 82.31 56.01 49.75 81.76 75.97 105.35 107.32 2.96 3.93 5.74 7.18 6.78 7.96 2.37-1.64 5.01-5.29 7.06-7.96 23.59-31.35 49.34-57.57 105.35-107.32 43.31-38.47 64.63-60.65 79.15-82.31 12.32-18.38 19.45-34.79 24-55.22 1.97-8.83 2.31-13.21 2.31-29.37 0.01-17.69-0.17-19.69-2.75-29-11.49-41.58-43.05-71.22-85.21-80-5.09-1.06-12.9-1.62-20.72-1.66-7.82-0.03-15.65 0.45-20.78 1.47-26.77 5.3-50.99 20.49-67.16 42.09-3.35 4.48-9.18 14.51-13.03 22.41-3.65 7.48-6.93 13.2-7.94 13.87-3.6-3.93-5.88-9.05-8.22-13.87-3.85-7.9-9.68-17.93-13.03-22.41-16.17-21.6-40.39-36.79-67.16-42.09-5.13-1.02-12.96-1.5-20.78-1.47z" fill="url(#linearGradient3203)"/>
+    <path id="path3259" filter="url(#filter3567)" d="m428 794.36c-378.85-253.89-122.3-381.43-24-288-129.33 4.45-165.37 71.09 24 288z" fill="url(#linearGradient3267)" fill-rule="evenodd"/>
+    <path id="path3337" filter="url(#filter3507)" d="m436 814.36c203.84-170.49 238.64-276.83 164-326 5.62 158.02-89.26 230.67-164 326z" fill="url(#linearGradient3345)" fill-rule="evenodd"/>
+    <path id="path3387" opacity=".52404" d="m426 802.36c64-118.92-49.71-323.29 104-306-119 32.81-13.18 210.28-104 306z" fill-rule="evenodd" filter="url(#filter3451)" fill="url(#radialGradient3395)"/>
+    <g id="g3538" opacity=".69712" fill-rule="evenodd" transform="matrix(1.1692 0 0 1.1692 -38.302 -61.412)">
+      <path id="path2406" opacity=".55769" d="m402.62 500.99c-2.29 5.03-10.01 12.92-12.5 13.5 4.79 5.12 13.05 0.75 12.5-13.5z" transform="matrix(1.3082 0 0 1.3082 -123.74 -155.35)" filter="url(#filter3364)" fill="url(#linearGradient3372)"/>
+      <path id="path2408" opacity=".29366" d="m402.38 500.74c-6.32 1.8-16.33 6.25-12.26 13.25 4.68-2.18 10.17-9.13 12.26-13.25z" transform="matrix(1.3082 0 0 1.3082 -123.74 -155.35)" filter="url(#filter3328)" fill="url(#linearGradient3374)"/>
+    </g>
+    <path id="path2421" opacity=".52404" d="m249.4 506.62s48.32 14.35 58.22 47.58c20.78-37.53 72.17-85.56 112.38-59.32-36.18-7.12-69.75 26.25-107.83 97.93-16.97-70.01-62.77-86.19-62.77-86.19z" fill-rule="evenodd" transform="matrix(-1,0,0,1,733,-4)" filter="url(#filter3284)" fill="#fff"/>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Heart</dc:title>
+        <dc:date>2010-01-25T06:05:26</dc:date>
+        <dc:description>A heart with shading, highlights and a shadow</dc:description>
+        <dc:source>http://openclipart.org/detail/29043/heart-by-majincline</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>MajinCline</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>amor</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>corazon</rdf:li>
+            <rdf:li>heart</rdf:li>
+            <rdf:li>image</rdf:li>
+            <rdf:li>love</rdf:li>
+            <rdf:li>media</rdf:li>
+            <rdf:li>png</rdf:li>
+            <rdf:li>public domain</rdf:li>
+            <rdf:li>romance</rdf:li>
+            <rdf:li>svg</rdf:li>
+            <rdf:li>unchecked</rdf:li>
+            <rdf:li>valentine</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
