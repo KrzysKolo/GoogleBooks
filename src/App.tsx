@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Books } from './pages';
+import  BooksPage  from './pages/BooksPage/BooksPage';
 
 function App() {
   return (
     <div className="App">
-      stx
-      <Books />
+      <BooksPage />
     </div>
   );
 }

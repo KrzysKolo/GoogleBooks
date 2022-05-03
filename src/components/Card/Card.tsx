@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Books } from '../../models/Books';
+import { BookInterface } from '../../models/BookInterface';
 import {
   Container,
   HeaderDiv,
@@ -18,12 +18,13 @@ import heartFilled from '../../assets/svgs/icons8-heart-24.png';
 import heartOutlined from '../../assets/svgs/icons8-favorite-32.png';
 
 export type CardBookProps = {
-  book: Books
+  book: BookInterface,
+  isFavoured: boolean,
 };
 
-const Card: React.FC<Books> = ({ name, autor, publishedDate, image, description, favoured }) => {
+const Card: React.FC<CardBookProps> = ({ book }) => {
 
-  const [isFavoured, setIsFavoured] = useState<boolean>(favoured);
+  const [isFavoured, setIsFavoured] = useState<boolean>(false);
   const toggleFavoured = () => {
     setIsFavoured(!isFavoured);
    };
@@ -34,7 +35,7 @@ const Card: React.FC<Books> = ({ name, autor, publishedDate, image, description,
         ? (
           <HeaderDiv >
             <HeaderH1>
-              {name}
+              {book.title}
             </HeaderH1>
             <HeaderFavoriteBookButton onClick={toggleFavoured}>
               { isFavoured
@@ -47,7 +48,7 @@ const Card: React.FC<Books> = ({ name, autor, publishedDate, image, description,
         : (
           <HeaderDiv2 >
             <HeaderH1>
-              {name}
+              {book.title}
             </HeaderH1>
             <HeaderFavoriteBookButton onClick={toggleFavoured}  >
               { isFavoured
@@ -60,13 +61,16 @@ const Card: React.FC<Books> = ({ name, autor, publishedDate, image, description,
       }
       <WrapperInfoBookDiv>
         <ImageDiv>
-          <ImageImg src={image.url} alt={image.alt} />
+          { book.image
+            ? <ImageImg src={book.image} alt={book.title} />
+            : <ImageImg src='https://cdn.pixabay.com/photo/2013/07/12/14/07/student-147783__340.png' alt="brak oficjalnego zdjecia" />
+          }
         </ImageDiv>
         <InfoDiv>
-          <InfoH2>{autor}</InfoH2>
-          <InfoH2>{publishedDate}</InfoH2>
+          <InfoH2>{book.authors}</InfoH2>
+          <InfoH2>{book.publishedDate}</InfoH2>
           <InfoP>
-            {description.length <= 200 ? `${description}` : `${description.substring(0, 200)} ...`}
+            {`${book.description}`.length <= 200 ? `${book.description}` : `${book.description.substring(0, 200)} ...`}
           </InfoP>
 
         </InfoDiv>

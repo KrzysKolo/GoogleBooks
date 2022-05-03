@@ -10,8 +10,8 @@ export const Container = styled.article`
   border: 2px solid ${PaletColors["jackson purple"]};
   border-radius: 10px;
   box-shadow: 3px 3px 5px ${PaletColors["grey porcelain"]};
-  min-height: 37vh;
-  width: 30vw;
+  min-height: 32vh;
+  width: 27vw;
   margin-bottom: 5vh;
   overflow: hidden;
   display: flex;
@@ -29,7 +29,7 @@ export const HeaderDiv = styled.div`
   align-items: center;
   height: 8vh;
   width: 100%;
-  margin: 0 ;
+  margin: 0;
   position: relative;
 `;
 export const HeaderDiv2 = styled(HeaderDiv)`
@@ -37,11 +37,12 @@ export const HeaderDiv2 = styled(HeaderDiv)`
 `;
 export const HeaderH1 = styled.h1`
   font-family: 'Kodchasan', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   width: calc(100% - 8vh);
 `;
 export const HeaderFavoriteBookButton = styled.button`
   background-color: transparent;
+  margin-top: 1rem;
   width: 7vh;
   height: 7vh;
   border-radius: 50%;
@@ -53,6 +54,11 @@ export const HeaderFavoriteBookButton = styled.button`
   align-items: center;
   border: none;
   cursor: pointer;
+  transform: scale(1);
+  transition: all 0.3s easy-in-out;
+  &:hover{
+    transform: scale(1.2)
+  }
 `;
 export const HeaderFavoriteBookImg = styled.img`
   width: 75%;
@@ -61,11 +67,11 @@ export const HeaderFavoriteBookImg = styled.img`
 export const WrapperInfoBookDiv = styled.div`
   display: flex;
   align-items: center;
+  margin: 0;
 `;
 export const ImageDiv = styled.div`
-  margin: 1rem;
-  width: 30%;
-  height: 50%;
+  margin: 0 0.5rem;
+  height: 75%;
   box-shadow: 3px 3px 5px ${PaletColors["grey porcelain"]};
   display: flex;
   justify-content: center;
@@ -75,20 +81,20 @@ export const ImageImg = styled.img`
   height: 100%;
 `;
 export const InfoDiv = styled.div`
-  margin: 1rem 0.5rem 1rem;
   padding: 0.5rem;
+  margin: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 `;
 export const InfoH2 = styled.h2`
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   margin: 0.3rem 0;
 `;
 export const InfoP = styled.p`
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.9em;
   margin: 0.3rem 0;
   text-align: left;
 `;

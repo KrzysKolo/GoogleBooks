@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "authors": "J. R. R. Tolkien",
+    "title": "Hobbit czyli tam i z powrotem",
+    "publishedDate": "2015-01",
+    "image": "http://books.google.com/books/content?id=8S6WtgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "language": "pl",
+    "description": "To kolejne wydanie wyczerpującego, kompleksowego przewodnika po języku JavaScript oraz jego najważniejszych klienckich i serwerowych interfejsach API"
+  },
+  {
+    "id": "2",
+    "authors": "American Kennel Club",
+    "title": "The Complete Dog Book",
+    "publishedDate": "1997",
+    "image": "http://books.google.com/books/content?id=5FksAAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "language": "en",
+    "description": "Utility class: An Obedience class for <b>dogs</b> who have won the tide Companion <b>Dog</b> Excellent (CDX). Utility <b>Dog</b> (UD): A title awarded to a <b>dog</b> that has been recorded a Utility <b>Dog</b> by the AKC as a result of having won certain minimum scores&nbsp."
+  },
+  {
+    "id": "3",
+    "authors": "Stoân Stefanov",
+    "title": "JavaScript",
+    "publishedDate": "2010",
+    "image":"http://books.google.com/books/content?id=8S6WtgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "language": "pl",
+    "description": "Poznaj potencja? j?zyka JavaScript!"
+  },
+  {
+    "id": "4",
+    "authors": "Michael S. Garvey, Anne E. Hohenhaus",
+    "title": "The Veterinarians' Guide to Your Dog's Symptoms",
+    "publishedDate": "1999",
+    "image": "http://books.google.com/books/content?id=j4V7voVcrh4C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "language": "en",
+    "description": "Avoiding Accidents An important thing for a <b>dog</b> owner to bear in mind is that no matter how smart a puppy or <b>dog</b> may be, she has no concept of potential danger, especially if she has lived in a protected environment all of her life."
+  },
+  {
+    "id": "5",
+    "authors": "Joan Palmer",
+    "title": "Cats",
+    "publishedDate": "1983",
+    "image": "http://books.google.com/books/content?id=XitWAAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "language": "en",
+    "description": "Some insecticides are fatal if swallowed and <b>cats</b> constantly lick their coats. Never use on or near a <b>cat</b>, anything containing creosote, naphthalene, tar, phenol, carbolic acid, creolin, DDT or chlordane. Even a minute quantity of DDT."
+  }
+]
