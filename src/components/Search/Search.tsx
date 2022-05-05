@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Container, SearchInput, SearchButton } from './Search.styles';
 import { useDispatch } from 'react-redux';
 import { addPhrase } from '../../features/searchBook/searchBookSlice';
-import axios from 'axios';
-import { getFiler, getGoogleBooksAPI } from '../../features/googleBooksAPI/googleBooksSlice';
+import { getGoogleBooksAPI } from '../../features/googleBooksAPI/googleBooksSlice';
+import { getBooksFromAPI } from '../../services/getBooksFromAPI';
+
+
 
 const Search: React.FC = () => {
 
@@ -16,21 +18,15 @@ const Search: React.FC = () => {
     dispatch(addPhrase(value));
     setValue("");
     fetchBooks();
-    dispatch(getFiler("any"));
   };
-  const fetchBooks = async () => {
-    try {
-      const res = await axios('https://www.googleapis.com/books/v1/volumes?q=cat');
-      dispatch(getGoogleBooksAPI(res.data.items));
-    }
-      catch (err) {}
+  const fetchBooks = () => {
+    getBooksFromAPI()
+      .then(res => {
+      dispatch(getGoogleBooksAPI(res.data.items))
+    })
   };
 
-
-
-
-
-  return (
+   return (
     <Container>
       <SearchInput
         name='Search'

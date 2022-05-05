@@ -19,19 +19,8 @@ const BooksPage: React.FC = () => {
 
   useEffect(() => {
      booksGoogleApi.forEach((item: GoogleBook) => {
-      if (item.volumeInfo.imageLinks !== undefined) {
-      const book = {
-        id: item.id,
-        autors: item.volumeInfo.authors,
-        title: item.volumeInfo.title,
-        publishedDate: item.volumeInfo.publishedDate,
-        image: item.volumeInfo.imageLinks.thumbnail,
-        language: item.volumeInfo.language,
-        description: item.searchInfo.textSnippet,
-        }
-        tab.push(book);
-      } else {
-        const book = {
+      if (item.volumeInfo.imageLinks === undefined) {
+       const book = {
           id: item.id,
           autors: item.volumeInfo.authors,
           title: item.volumeInfo.title,
@@ -41,7 +30,39 @@ const BooksPage: React.FC = () => {
           description: item.searchInfo.textSnippet,
           }
           tab.push(book);
-    }
+      } else if (item.searchInfo === undefined && item.volumeInfo.imageLinks === undefined) {
+        const book = {
+            id: item.id,
+            autors: item.volumeInfo.authors,
+            title: item.volumeInfo.title,
+            publishedDate: item.volumeInfo.publishedDate,
+            image: 'https://cdn.pixabay.com/photo/2017/01/31/00/09/book-2022464__340.png',
+            language: item.volumeInfo.language,
+            description: "Brak danych",
+            }
+            tab.push(book);
+        } else if (item.searchInfo === undefined) {
+        const book = {
+            id: item.id,
+            autors: item.volumeInfo.authors,
+            title: item.volumeInfo.title,
+            publishedDate: item.volumeInfo.publishedDate,
+            image: item.volumeInfo.imageLinks.thumbnail,
+            language: item.volumeInfo.language,
+            description: "Brak danych",
+            }
+            tab.push(book);
+       } else  {   const book = {
+        id: item.id,
+        autors: item.volumeInfo.authors,
+        title: item.volumeInfo.title,
+        publishedDate: item.volumeInfo.publishedDate,
+        image: item.volumeInfo.imageLinks.thumbnail,
+        language: item.volumeInfo.language,
+        description: item.searchInfo.textSnippet,
+        }
+        tab.push(book);
+      }
 
      });
 

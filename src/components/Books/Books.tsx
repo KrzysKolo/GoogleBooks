@@ -3,10 +3,6 @@ import { Container } from './Books.styles';
 import { Filter, Cards } from './../';
 import { CardsProps } from '../../models/CardsProps';
 import Search from '../Search';
-import { isIfStatement } from 'typescript';
-import { useSelector } from 'react-redux';
-import { getFilterAny } from '../../features/googleBooksAPI/googleBooksSlice';
-;
 
 const Books: React.FC<CardsProps> = ({ books }) => {
 
@@ -21,12 +17,8 @@ const Books: React.FC<CardsProps> = ({ books }) => {
       );
     }
     setFillteredBooks(booksFiltered);
-
     }, [filters])
 
-  console.log(filters)
-  console.log(filteredBooks)
-  console.log(books)
   return (
     <Container>
       <Search />
