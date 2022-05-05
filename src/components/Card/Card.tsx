@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { BookInterface } from '../../models/BookInterface';
 import {
   Container,
@@ -19,26 +20,26 @@ import heartOutlined from '../../assets/svgs/icons8-favorite-32.png';
 
 export type CardBookProps = {
   book: BookInterface,
-  isFavoured: boolean,
 };
 
 const Card: React.FC<CardBookProps> = ({ book }) => {
 
-  const [isFavoured, setIsFavoured] = useState<boolean>(false);
+  const [favorite, setFavorite] = useState(false);
+
   const toggleFavoured = () => {
-    setIsFavoured(!isFavoured);
+    setFavorite(!favorite);
    };
 
   return (
     <Container>
-      { isFavoured
+      { favorite
         ? (
           <HeaderDiv >
             <HeaderH1>
               {book.title}
             </HeaderH1>
             <HeaderFavoriteBookButton onClick={toggleFavoured}>
-              { isFavoured
+              { favorite
                 ? (<HeaderFavoriteBookImg src={heartFilled} alt='filled heard' />)
                 : (<HeaderFavoriteBookImg src={heartOutlined} alt='outlined heart' />)
               }
@@ -51,7 +52,7 @@ const Card: React.FC<CardBookProps> = ({ book }) => {
               {book.title}
             </HeaderH1>
             <HeaderFavoriteBookButton onClick={toggleFavoured}  >
-              { isFavoured
+              { favorite
                 ? (<HeaderFavoriteBookImg src={heartFilled} alt='filled heard' />)
                 : (<HeaderFavoriteBookImg src={heartOutlined} alt='outlined heart' />)
               }
