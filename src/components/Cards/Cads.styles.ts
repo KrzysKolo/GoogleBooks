@@ -3,25 +3,29 @@ import styled from 'styled-components';
 import PaletColors from '../../assets/colors/PaletColors';
 
 export const Container = styled.section`
-  width: 1540px;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 510px);
   justify-content: center;
   align-content: center;
-  background: red;
-  @media screen and (min-width: 800px) {
+  align-self: stretch;
+  justify-self: stretch;
+  @media screen and (min-width: 960px) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 510px);
     justify-content: center;
     align-content: center;
-    background: green ;
+    align-self: stretch;
+    justify-self: stretch;
 }
-@media screen and (min-width: 1540px) {
+@media screen and (min-width: 1440px) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 505px);
     justify-content: center;
     align-content: center;
-    background: navy ;
+    align-self: center;
+    justify-self: center;
+    align-self: stretch;
+    justify-self: stretch;
 }
 `;
 

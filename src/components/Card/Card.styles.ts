@@ -10,12 +10,14 @@ export const Container = styled.article`
   border: 2px solid ${PaletColors["jackson purple"]};
   border-radius: 10px;
   box-shadow: 3px 3px 5px ${PaletColors["grey porcelain"]};
-  min-height: 32vh;
-  width: 27vw;
+  height: 300px;
+  width: 480px;
   margin-bottom: 5vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-self: center;
+  justify-self: center;
 `;
 export const HeaderDiv = styled.div`
   background-color: ${PaletColors["synthetic pumpkin"]};
@@ -27,7 +29,7 @@ export const HeaderDiv = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 8vh;
+  height: 11vh;
   width: 100%;
   margin: 0;
   position: relative;
@@ -67,11 +69,12 @@ export const HeaderFavoriteBookImg = styled.img`
 export const WrapperInfoBookDiv = styled.div`
   display: flex;
   align-items: center;
-  margin: 0;
+  margin-top: 12px;
 `;
 export const ImageDiv = styled.div`
-  margin: 0 0.5rem;
-  height: 75%;
+  margin: 0 1rem;
+  height: 130px;
+  width: 120px;
   box-shadow: 3px 3px 5px ${PaletColors["grey porcelain"]};
   display: flex;
   justify-content: center;
@@ -79,10 +82,11 @@ export const ImageDiv = styled.div`
 `;
 export const ImageImg = styled.img`
   height: 100%;
+  object-fit: cover;
 `;
 export const InfoDiv = styled.div`
   padding: 0.5rem;
-  margin: 0.5rem;
+  margin: 0.75rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
