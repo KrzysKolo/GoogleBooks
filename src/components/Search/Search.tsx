@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Container, SearchInput, SearchButton } from './Search.styles';
+import { Container, SearchInput, SearchButton, ImgButton, WrapperSearch, WrapperRadio } from './Search.styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { addPhrase, addPhraseBook } from '../../features/searchBook/searchBookSlice';
 import { getGoogleBooksAPI } from '../../features/googleBooksAPI/googleBooksSlice';
 import { getBooksFromAPI } from '../../services/getBooksFromAPI';
 import axios from 'axios';
 import { apiUrl, keyGoogle } from '../../api/booksApi';
+import photo from '../../assets/svgs/search.png';
 
 
 
@@ -33,17 +34,22 @@ const Search: React.FC = () => {
   };
 
    return (
-    <Container>
-      <SearchInput
-        name='Search'
-        id='Search'
-        value={value}
-        placeholder='Search'
-        onChange={handleChange}
-      />
-      <SearchButton onClick={handleClick}>
-          search
-      </SearchButton>
+     <Container>
+      <WrapperSearch>
+        <SearchInput
+          name='Search'
+          id='Search'
+          value={value}
+          placeholder='Search'
+          onChange={handleChange}
+        />
+        <SearchButton onClick={handleClick}>
+          <ImgButton src={photo} />
+        </SearchButton>
+       </WrapperSearch>
+       <WrapperRadio>
+
+       </WrapperRadio>
     </Container>
   )
 }

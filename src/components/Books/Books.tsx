@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container } from './Books.styles';
 import { Filter, Cards } from './../';
 import { CardsProps } from '../../models/CardsProps';
-import Search from '../Search';
+import { Header } from './../';
 
 const Books: React.FC<CardsProps> = ({ books }) => {
 
@@ -21,7 +21,7 @@ const Books: React.FC<CardsProps> = ({ books }) => {
 
   return (
     <Container>
-      <Search />
+      <Header />
       <Filter filters={filters} setFilters={setFilters} />
       {filters === "any"
         ? <Cards books={books} />
