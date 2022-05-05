@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Books } from '../../components';
 import { Wrapper } from './BooksPage.styles';
 import { BookInterface } from '../../models/BookInterface'
-import axios from 'axios';
 import GoogleBook from '../../api/google/GoogleBookModels';
 import { getAllGoogleBooks, getGoogleBooksAPI } from '../../features/googleBooksAPI/googleBooksSlice';
 

@@ -17,6 +17,7 @@ import {
 } from './Card.styles';
 import heartFilled from '../../assets/svgs/icons8-heart-24.png';
 import heartOutlined from '../../assets/svgs/icons8-favorite-32.png';
+import 'aos';
 
 export type CardBookProps = {
   book: BookInterface,
