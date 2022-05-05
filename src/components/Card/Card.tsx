@@ -32,7 +32,9 @@ const Card: React.FC<CardBookProps> = ({ book }) => {
    };
 
   return (
-    <Container>
+    <Container data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="1500">
       { favorite
         ? (
           <HeaderDiv >
