@@ -9,12 +9,8 @@ import { getAllGoogleBooks, getGoogleBooksAPI } from '../../features/googleBooks
 
 const BooksPage: React.FC = () => {
 
-
   const [booksGoogle, setBooksGoogle] = useState([]);
-
   const tab: BookInterface[] | string | any = []
-  const dispatch = useDispatch();
-
   const booksGoogleApi = useSelector(getAllGoogleBooks)
 
   useEffect(() => {
@@ -63,12 +59,9 @@ const BooksPage: React.FC = () => {
         }
         tab.push(book);
       }
-
      });
-
     setBooksGoogle(tab);
   }, [booksGoogleApi]);
-
 
   console.log(booksGoogle)
   return (
