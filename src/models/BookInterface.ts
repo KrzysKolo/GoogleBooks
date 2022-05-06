@@ -1,12 +1,11 @@
 export interface BookInterface {
-  favoured?: string | boolean;
   id: string ;
   authors: string | string[];
   title: string;
   publishedDate: string;
-  image?: string | any | undefined;
+  image?: string | undefined;
   language: string;
   link: string;
-  description: string;
+  description?: string | undefined | any;
   favoriteBook: boolean;
 };

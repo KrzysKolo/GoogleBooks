@@ -32,12 +32,12 @@ const Search: React.FC = () => {
   };
 /*   await axios.get(`${apiUrl}?q=${phrase}&key=${keyGoogle}&langRestrict=${language}&maxResults=20`) */
   const fetchBooks = async () => {
-    await axios.get(`${apiUrl}?q=${value}+intitle&key=${keyGoogle}&langRestrict=${language}&maxResults=20`)
+    await axios.get(`${apiUrl}?q=${value}&key=${keyGoogle}`)
       .then(res => {
       dispatch(getGoogleBooksAPI(res.data.items))
     })
   };
-console.log(`${apiUrl}?q=${value}&key=${keyGoogle}&maxResults=20`)
+console.log(`${apiUrl}?q=${value}+intitle&key=${keyGoogle}&maxResults=20`)
 console.log(phrase)
    return (
      <Container>

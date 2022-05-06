@@ -11,7 +11,7 @@ import { getAllGoogleBooks, getGoogleBooks } from '../../features/googleBooks/go
 const BooksPage: React.FC = () => {
 
 
-  const tab: BookInterface[] | string | any = []
+  const tab: BookInterface[] = []
   const booksGoogleApi = useSelector(getAllGoogleBooksApi)
   const booksGoogle = useSelector(getAllGoogleBooks);
   const dispatch = useDispatch();
@@ -20,18 +20,18 @@ const BooksPage: React.FC = () => {
     booksGoogleApi.forEach((item: GoogleBook) => {
       const bookWithoutPhoto = {
         id: item.id,
-        autors: item.volumeInfo.authors,
+        authors: item.volumeInfo.authors,
         title: item.volumeInfo.title,
         publishedDate: item.volumeInfo.publishedDate,
         image: 'https://cdn.pixabay.com/photo/2017/01/31/00/09/book-2022464__340.png',
         language: item.volumeInfo.language,
         link: item.volumeInfo.previewLink,
-        description: item.searchInfo.textSnippet,
+        description: item.volumeInfo.description,
         favoriteBook: false
       }
       const bookWithoutPhotoAndDescription = {
         id: item.id,
-        autors: item.volumeInfo.authors,
+        authors: item.volumeInfo.authors,
         title: item.volumeInfo.title,
         publishedDate: item.volumeInfo.publishedDate,
         image: 'https://cdn.pixabay.com/photo/2017/01/31/00/09/book-2022464__340.png',
@@ -42,7 +42,7 @@ const BooksPage: React.FC = () => {
       }
       const bookDescription = {
         id: item.id,
-        autors: item.volumeInfo.authors,
+        authors: item.volumeInfo.authors,
         title: item.volumeInfo.title,
         publishedDate: item.volumeInfo.publishedDate,
         image: item.volumeInfo.imageLinks.thumbnail,
@@ -53,13 +53,13 @@ const BooksPage: React.FC = () => {
       }
       const book = {
         id: item.id,
-        autors: item.volumeInfo.authors,
+        authors: item.volumeInfo.authors,
         title: item.volumeInfo.title,
         publishedDate: item.volumeInfo.publishedDate,
         image: item.volumeInfo.imageLinks.thumbnail,
         language: item.volumeInfo.language,
         link: item.volumeInfo.previewLink,
-        description: item.searchInfo.textSnippet,
+        description: item.volumeInfo.description,
         favoriteBook: false
       }
 
