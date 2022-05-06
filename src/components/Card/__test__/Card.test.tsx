@@ -10,8 +10,9 @@ const book: BookInterface  = {
   "publishedDate": "2015-01",
   "image": "http://books.google.com/books/content?id=8S6WtgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   "language": "pl",
+  "link": "http://books.google.pl/books?id=rToaogEACAAJ&dq=hoobit&hl=&cd=1&source=gbs_api",
   "description": "To kolejne wydanie wyczerpującego, kompleksowego przewodnika po języku JavaScript oraz jego najważniejszych klienckich i serwerowych interfejsach API",
-
+  "favoriteBook": false
 };
 
 describe('<Card />', () => {
@@ -23,13 +24,13 @@ describe('<Card />', () => {
   });
   it('should show phone authors', () => {
     render(
-      <Card book={book} />
+      <Card book={book}  />
     );
     expect(screen.getByText(/j. r. r. tolkien/i)).toBeDefined();
   });
   it('should show publishedDate', () => {
     render(
-      <Card book={book} />
+      <Card book={book}  />
     );
     expect(screen.getByText(/2015-01/i)).toBeDefined();
   });
@@ -49,7 +50,7 @@ describe('<Card />', () => {
   });
   it('should show filled heart', () => {
     render(
-      <Card book={book} />
+      <Card book={book}  />
     );
     expect((screen.queryByAltText(/outlined heart/i)  as HTMLElement)).toBeFalsy();
     expect(screen.getByAltText(/filled heart/i)).toBeDefined();

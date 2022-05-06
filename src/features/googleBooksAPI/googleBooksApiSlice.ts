@@ -1,3 +1,4 @@
+/* pobieranie danych z API */
 
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import GoogleBook from '../../api/google';
@@ -11,8 +12,8 @@ const initialState: googleBooksApiType = {
   googleBooksApi: [],
 };
 
-const googleBooksSlice = createSlice({
-  name: 'googleBooks',
+const googleBooksApiSlice = createSlice({
+  name: 'googleBooksApi',
   initialState,
   reducers: {
     getGoogleBooksAPI: (state, action) => {
@@ -21,8 +22,8 @@ const googleBooksSlice = createSlice({
   }
 })
 
-export const { getGoogleBooksAPI } = googleBooksSlice.actions;
-export const getAllGoogleBooks = (state: RootState) => state.googleBooks.googleBooksApi;
-export default googleBooksSlice.reducer;
+export const { getGoogleBooksAPI } = googleBooksApiSlice.actions;
+export const getAllGoogleBooksApi = (state: RootState) => state.googleBooksApi.googleBooksApi;
+export default googleBooksApiSlice.reducer;
 
 

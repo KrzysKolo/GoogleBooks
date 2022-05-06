@@ -43,3 +43,6 @@ export const ImgButton = styled.img`
     transform: scale(1.2);
   }
 `;
+export const InputRadio = styled.input`
+
+`;

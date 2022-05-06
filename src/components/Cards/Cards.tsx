@@ -8,7 +8,7 @@ const Cards: React.FC<CardsProps> = ({ books }) => {
 
   return (
     <Container>
-      {books.map((book: BookInterface) => <Card key={book.id} book={book}  />)}
+      {books.map((book: BookInterface) => <Card key={book.id} book={book} />)}
     </Container>
   )
 }

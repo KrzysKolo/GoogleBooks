@@ -25,7 +25,7 @@ export type CardBookProps = {
 
 const Card: React.FC<CardBookProps> = ({ book }) => {
 
-  const [favorite, setFavorite] = useState(false);
+  const [favorite, setFavorite] = useState(book.favoriteBook);
 
   const toggleFavoured = () => {
     setFavorite(!favorite);
