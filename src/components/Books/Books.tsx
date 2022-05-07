@@ -4,15 +4,18 @@ import { Filter, Cards } from './../';
 import { CardsProps } from '../../models/CardsProps';
 import { Header } from './../';
 import { changeFavoriteBook } from '../../features/favoriteBooks/favoriteBooksSlice';
+import { useSelector } from 'react-redux';
+import { getUpdateGoogleBooks } from '../../features/googleBooks/googleBooks';
 
 
 const Books: React.FC<CardsProps> = ({ books }) => {
 
+  const favoriteGoogleBooks = useSelector(getUpdateGoogleBooks)
   const [filters, setFilters] = useState<string | boolean>("any");
-  const [filteredBooks, setFillteredBooks] = useState(books)
+  const [filteredBooks, setFillteredBooks] = useState(favoriteGoogleBooks)
 
   useEffect(() => {
-    let booksFiltered = [...books];
+    let booksFiltered = [...favoriteGoogleBooks];
     if (filters !== "any") {
       booksFiltered = booksFiltered.filter(
         (book) => {
@@ -39,7 +42,7 @@ const Books: React.FC<CardsProps> = ({ books }) => {
       <Header />
       <Filter filters={filters} setFilters={setFilters} />
       {filters === "any"
-        ? <Cards books={books} />
+        ? <Cards books={favoriteGoogleBooks} />
         : <Cards books={filteredBooks} /> }
     </Container>
   )

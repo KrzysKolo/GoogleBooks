@@ -18,7 +18,7 @@ const book: BookInterface  = {
 describe('<Card />', () => {
   it('should show title of book', () => {
     render(
-      <Card book={book}  />
+      <Card book={book}   />
     );
     expect(screen.getByText(/hobbit czyli tam i z powrotem/i)).toBeDefined();
   });
@@ -43,20 +43,20 @@ describe('<Card />', () => {
   });
   it('should show outlined heart', () => {
     render(
-      <Card book={book}  />
+      <Card book={book}   />
     );
     expect(screen.queryByAltText(/filled heart/i)).not.toBeDefined();
     expect(screen.getByAltText(/outlined heart/i)).toBeDefined();
   });
   it('should show filled heart', () => {
     render(
-      <Card book={book}  />
+      <Card book={book}   />
     );
     expect((screen.queryByAltText(/outlined heart/i)  as HTMLElement)).toBeFalsy();
     expect(screen.getByAltText(/filled heart/i)).toBeDefined();
   });
   it('should toggle heart status', () => {
-    render(<Card book={book} />);
+    render(<Card book={book}  />);
     userEvent.click(screen.getByRole('button'));
     expect((screen.queryByAltText(/outlined heart/i) as HTMLElement)).toBeFalsy();
     expect(screen.getByAltText(/filled heart/i)).toBeDefined();

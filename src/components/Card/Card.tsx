@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { BookInterface } from '../../models/BookInterface';
 import {
@@ -18,18 +18,28 @@ import {
 import heartFilled from '../../assets/svgs/icons8-heart-24.png';
 import heartOutlined from '../../assets/svgs/icons8-favorite-32.png';
 import 'aos';
+import { getUpdateGoogleBooks, updateGoogleBook } from '../../features/googleBooks/googleBooks';
 
 export type CardBookProps = {
   book: BookInterface,
+
 };
 
 const Card: React.FC<CardBookProps> = ({ book }) => {
 
+  const dispatch = useDispatch();
+  const favoriteGoogleBooks = useSelector(getUpdateGoogleBooks)
   const [favorite, setFavorite] = useState(book.favoriteBook);
 
   const toggleFavoured = () => {
     setFavorite(!favorite);
-   };
+    dispatch(updateGoogleBook(favoriteGoogleBooks.map(item => {
+      return item.id === book.id ? {...item, favoriteBook: !favorite } : item
+    })));
+ };
+/*   const updateBook = () => {
+    dispatch(updateGoogleBook({ ...book, favoriteBook: favorite, }));
+} */
 
   return (
     <Container data-aos="flip-left"
@@ -84,3 +94,13 @@ const Card: React.FC<CardBookProps> = ({ book }) => {
 }
 
 export default Card;
+
+
+function prev(arg0: { favoriteBook: boolean; id: string; authors: string | string[]; title: string; publishedDate: string; image?: string | undefined; language: string; link: string; description?: any; }) {
+  throw new Error('Function not implemented.');
+}
+
+function authors(id: string, authors: any, title: any, favoriteBook: any, arg4: boolean): { payload: any; type: string; } {
+  throw new Error('Function not implemented.');
+}
+

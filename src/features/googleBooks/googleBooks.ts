@@ -20,11 +20,15 @@ const googleBooksSlice = createSlice({
     getGoogleBooks: (state, action) => {
       state.googleBooks = action.payload;
     },
+    updateGoogleBook: (state, actions) => {
+      state.googleBooks = actions.payload;
+    },
   }
 })
 
-export const { getGoogleBooks } = googleBooksSlice.actions;
+export const { getGoogleBooks, updateGoogleBook } = googleBooksSlice.actions;
 export const getAllGoogleBooks = (state: RootState) => state.googleBook.googleBooks;
+export const getUpdateGoogleBooks = (state: RootState) => state.googleBook.googleBooks;
 export default googleBooksSlice.reducer;
 
 
