@@ -37,14 +37,11 @@ const Card: React.FC<CardBookProps> = ({ book }) => {
       return item.id === book.id ? {...item, favoriteBook: !favorite } : item
     })));
  };
-/*   const updateBook = () => {
-    dispatch(updateGoogleBook({ ...book, favoriteBook: favorite, }));
-} */
 
   return (
     <Container data-aos="flip-left"
-    data-aos-easing="ease-out-cubic"
-    data-aos-duration="1500">
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1500">
       { favorite
         ? (
           <HeaderDiv >
@@ -94,13 +91,4 @@ const Card: React.FC<CardBookProps> = ({ book }) => {
 }
 
 export default Card;
-
-
-function prev(arg0: { favoriteBook: boolean; id: string; authors: string | string[]; title: string; publishedDate: string; image?: string | undefined; language: string; link: string; description?: any; }) {
-  throw new Error('Function not implemented.');
-}
-
-function authors(id: string, authors: any, title: any, favoriteBook: any, arg4: boolean): { payload: any; type: string; } {
-  throw new Error('Function not implemented.');
-}
 

@@ -37,8 +37,7 @@ const Search: React.FC = () => {
       dispatch(getGoogleBooksAPI(res.data.items))
     })
   };
-console.log(`${apiUrl}?q=${value}+intitle&key=${keyGoogle}&maxResults=20`)
-console.log(phrase)
+
    return (
      <Container>
       <WrapperSearch>

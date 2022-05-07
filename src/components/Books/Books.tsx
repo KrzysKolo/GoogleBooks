@@ -28,14 +28,8 @@ const Books: React.FC<CardsProps> = ({ books }) => {
             book.favoriteBook === (filters === "favoured" ? true : false)
           )})
     }
-    console.log(booksFiltered)
     setFillteredBooks(booksFiltered);
    }, [filters])
-
-
-
-   console.log(filters)
-   console.log(filteredBooks)
 
   return (
     <Container>

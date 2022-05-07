@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Books } from '../../components';
 import { Wrapper } from './BooksPage.styles';
 import { BookInterface } from '../../models/BookInterface'
-
 import GoogleBook from '../../api/google/GoogleBookModels';
 import { getAllGoogleBooksApi } from '../../features/googleBooksAPI/googleBooksApiSlice';
 import { getAllGoogleBooks, getGoogleBooks } from '../../features/googleBooks/googleBooks';
@@ -78,7 +77,6 @@ const BooksPage: React.FC = () => {
 
   }, [booksGoogleApi]);
 
-  console.log(booksGoogle)
   return (
     <Wrapper>
       <Books books={booksGoogle} />
