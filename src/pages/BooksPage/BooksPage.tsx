@@ -15,8 +15,10 @@ const BooksPage: React.FC = () => {
   const booksGoogle = useSelector(getAllGoogleBooks);
   const dispatch = useDispatch();
 
+
+
   useEffect(() => {
-    booksGoogleApi.forEach((item: GoogleBook) => {
+    booksGoogleApi.map(item => {
       const bookWithoutPhoto = {
         id: item.id,
         authors: item.volumeInfo.authors,
@@ -44,7 +46,7 @@ const BooksPage: React.FC = () => {
         authors: item.volumeInfo.authors,
         title: item.volumeInfo.title,
         publishedDate: item.volumeInfo.publishedDate,
-        image: item.volumeInfo.imageLinks.thumbnail,
+        image?: item.volumeInfo.imageLinks.thumbnail,
         language: item.volumeInfo.language,
         link: item.volumeInfo.previewLink,
         description: "Brak danych",
@@ -55,23 +57,17 @@ const BooksPage: React.FC = () => {
         authors: item.volumeInfo.authors,
         title: item.volumeInfo.title,
         publishedDate: item.volumeInfo.publishedDate,
-        image: item.volumeInfo.imageLinks.thumbnail,
+        image?: item.volumeInfo.imageLinks.thumbnail,
         language: item.volumeInfo.language,
         link: item.volumeInfo.previewLink,
         description: item.volumeInfo.description,
         favoriteBook: false
       }
 
-      if (item.searchInfo.textSnippet === undefined) {
-        tab.push(bookDescription);
-      } else if (item.searchInfo.textSnippet === undefined || item.volumeInfo.imageLinks === undefined) {
-        tab.push(bookWithoutPhotoAndDescription);
-      } else if (item.volumeInfo.imageLinks === undefined) {
-        tab.push(bookWithoutPhoto);
-      } else {
-        tab.push(book);
-      }
-     });
+        console.log(typeof item.volumeInfo.imageLinks.thumbnail)
+        return item.volumeInfo.imageLinks.thumbnail === undefined ? tab.push(bookWithoutPhoto) : tab.push(book);
+      })
+
     /*    setBooksGoogle(tab); */
     dispatch(getGoogleBooks(tab));
 
