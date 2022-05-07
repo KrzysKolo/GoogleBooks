@@ -3,7 +3,7 @@ export interface BookInterface {
   authors: string | string[];
   title: string;
   publishedDate: string;
-  image?: string | undefined ;
+  image: string ;
   language: string;
   link: string;
   description?: string | undefined | any;

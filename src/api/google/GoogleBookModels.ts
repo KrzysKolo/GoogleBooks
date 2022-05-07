@@ -17,7 +17,7 @@ export interface PanelizationSummary {
 
 export interface ImageLinks {
   smallThumbnail: string;
-  thumbnail?: string | undefined;
+  thumbnail: string | any;
   small: string;
   medium: string;
   large: string;
@@ -43,7 +43,7 @@ export interface VolumeInfo {
   allowAnonLogging: boolean;
   contentVersion: string;
   panelizationSummary: PanelizationSummary;
-  imageLinks?: ImageLinks;
+  imageLinks: ImageLinks;
   language: string;
   previewLink: string;
   infoLink: string;
@@ -119,7 +119,7 @@ export interface AccessInfo {
 }
 
 export default interface GoogleBook {
-  searchInfo: any | undefined;
+  searchInfo: any;
   kind: string;
   id: string;
   etag: string;

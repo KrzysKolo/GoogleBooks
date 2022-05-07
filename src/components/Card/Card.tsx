@@ -22,8 +22,7 @@ import { getUpdateGoogleBooks, updateGoogleBook } from '../../features/googleBoo
 
 export type CardBookProps = {
   book: BookInterface,
-
-};
+ };
 
 const Card: React.FC<CardBookProps> = ({ book }) => {
 
