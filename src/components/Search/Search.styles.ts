@@ -7,10 +7,14 @@ export const Container = styled.section`
   flex-direction: column;
   height: 12vh;
   width: 100%;
+  ${({ theme }) => theme.mq.phone} {
+   padding: 5px;
+  };
 `;
 export const WrapperSearch = styled.div`
   display: flex;
   padding: 5px;
+ ;
 `;
 export const WrapperRadio = styled(WrapperSearch)`
   align-items: center;
@@ -29,7 +33,8 @@ export const SearchInput = styled.input`
   width: 35rem;
 
   ${({ theme }) => theme.mq.phone} {
-    max-width: 25rem;
+    max-width: 20rem;
+    padding: 5px;
   };
 
   ${({ theme }) => theme.mq.desktop} {

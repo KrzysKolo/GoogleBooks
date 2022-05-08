@@ -9,7 +9,7 @@ const Loading: React.FC = () => {
     <Container>
       <Loader
         type="ellipsis"
-        color="#f67a90"
+        color="#ff793f"
         size={150}
       />
     </Container>

@@ -22,11 +22,16 @@ export const Container = styled.section`
   padding: 0;
 
   ${({ theme }) => theme.mq.phone} {
-    flex-direction: column;
-    max-width: 100%;
-    justify-content: center;
     align-items: center;
-  }
+    background-size: contain;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+  };
+
+  ${({ theme }) => theme.mq.tablet} {
+    background-size: contain;
+  };
 
   ${({ theme }) => theme.mq.desktop} {
     flex-direction: row;
@@ -59,17 +64,20 @@ export const WrapperRight = styled.div`
 
   ${({ theme }) => theme.mq.phone} {
     align-items: center;
+    background-image: none;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    margin-top: -1rem;
     width: 100%;
   };
 
-  ${({ theme }) => theme.mq.phone} {
+  ${({ theme }) => theme.mq.tablet} {
     align-items: center;
     background-image: none;
     flex-direction: column;
     height: 100% ;
     justify-content: center;
+    margin-top: 0;
     width: 100%;
   };
 

@@ -2,7 +2,8 @@ import React from 'react';
 import { FilterProps } from '../../models/FilterProps';
 import { Container } from './Filter.styles';
 
-const Filter: React.FC<FilterProps> = ({ setFilters}) => {
+const Filter: React.FC<FilterProps> = ({ setFilters }) => {
+
   return (
     <Container>
       <label htmlFor="favoured">Filter:</label>

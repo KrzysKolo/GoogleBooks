@@ -35,7 +35,7 @@ const Search: React.FC = () => {
 
   const fetchBooks = async () => {
    try {
-        console.log(`${apiUrl}?q=${value}&key=${keyGoogle}&maxResults=20&langRestrict=${valueRadio}`)
+        console.log(`${apiUrl}?q=${phrase}&key=${keyGoogle}&maxResults=20&langRestrict=${language}`)
         const books = await axios.get(`${apiUrl}?q=${value}&key=${keyGoogle}&maxResults=20&langRestrict=${valueRadio}`)
         console.log(books.data.items)
         dispatch(getGoogleBooksAPI(books.data.items))

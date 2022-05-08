@@ -30,7 +30,7 @@ export const theme = {
     },
   },
   mq: {
-    phone: '@media (min-width: 200px)',
+    phone: '@media (min-width: 270px)',
     tablet: '@media (min-width: 768px)',
     desktop: '@media (min-width: 960px)',
     bigDesktop: '@media (min-width: 1235px)',
