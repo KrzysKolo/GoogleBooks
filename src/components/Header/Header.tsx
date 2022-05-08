@@ -11,9 +11,10 @@ const Header:React.FC = () => {
         </TextH1>
       </WrapperLeft>
       <WrapperRight>
-        <Search />
+        <div>
+          <Search />
+        </div>
       </WrapperRight>
-
     </Container>
   )
 }

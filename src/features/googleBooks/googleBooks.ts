@@ -23,7 +23,7 @@ const googleBooksSlice = createSlice({
     updateGoogleBook: (state, actions) => {
       state.googleBooks = actions.payload;
     },
-  }
+  },
 })
 
 export const { getGoogleBooks, updateGoogleBook } = googleBooksSlice.actions;

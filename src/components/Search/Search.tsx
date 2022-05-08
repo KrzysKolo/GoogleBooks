@@ -1,12 +1,13 @@
-import React, { FormEventHandler, useState } from 'react';
+import React, { useState } from 'react';
 import { Container, SearchInput, SearchButton, ImgButton, WrapperSearch, WrapperRadio, InputRadio } from './Search.styles';
 import { useDispatch, useSelector } from 'react-redux';
-import { addLanguage, addLanguageBook, addPhrase, addPhraseBook } from '../../features/searchBook/searchBookSlice';
-import { getBooksFromAPI } from '../../services/getBooksFromAPI';
+import { addLanguage, addLanguageBook, addPhrase, addPhraseBook, getGoogleBooksAPI, setError, setLoading } from '../../features/googleBooksAPI/googleBooksApiSlice';
+import photo from '../../assets/svgs/search.png';
+import { AppDispatch } from '../../app/store';
 import axios from 'axios';
 import { apiUrl, keyGoogle } from '../../api/booksApi';
-import photo from '../../assets/svgs/search.png';
-import { getGoogleBooksAPI } from '../../features/googleBooksAPI/googleBooksApiSlice';
+
+
 
 const Search: React.FC = () => {
 
@@ -25,20 +26,47 @@ const Search: React.FC = () => {
   };
 
   const handleClick = () => {
+    dispatch(setLoading(true));
     dispatch(addPhrase(value));
     dispatch(addLanguage(valueRadio));
     setValue("");
     fetchBooks();
   };
-/*   await axios.get(`${apiUrl}?q=${phrase}&key=${keyGoogle}&langRestrict=${language}&maxResults=20`) */
-  const fetchBooks = async () => {
-    await axios.get(`${apiUrl}?q=${value}&key=${keyGoogle}`)
-      .then(res => {
-      dispatch(getGoogleBooksAPI(res.data.items))
-    })
-  };
 
-   return (
+  const fetchBooks = async () => {
+    /*  await axios.get(`${apiUrl}?q=${value}&key=${keyGoogle}`)
+    .then(res => {
+    dispatch(getGoogleBooksAPI(res.data.items))
+  }) */
+   try {
+        console.log(`${apiUrl}?q=${value}&key=${keyGoogle}&maxResults=20&langRestrict=${valueRadio}`)
+        const books = await axios.get(`${apiUrl}?q=${value}&key=${keyGoogle}&maxResults=20&langRestrict=${valueRadio}`)
+        console.log(books.data.items)
+        dispatch(getGoogleBooksAPI(books.data.items))
+        dispatch(setLoading(false));
+       }
+      catch( error) {
+        dispatch(setError('Oops! Something went wrong!'));
+        dispatch(setLoading(false));
+      }
+  }
+
+
+
+/*   const fetchBooks = createAsyncThunk(
+    'books/getGoogleBooksAPI',
+    async (name, thunkAPI) => {
+    await axios.get(`${apiUrl}?q=${value}&key=${keyGoogle}&maxResults=20&langRestrict=${language}`)
+      .then(res => {
+        dispatch(getGoogleBooksAPI(res.data.items));
+      })
+      .catch( error => {
+        return thunkAPI.rejectWithValue('something went wrong');
+      })
+    }
+  ); */
+
+  return (
      <Container>
       <WrapperSearch>
         <SearchInput
@@ -61,3 +89,4 @@ const Search: React.FC = () => {
 }
 
 export default Search;
+

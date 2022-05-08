@@ -10,7 +10,7 @@ import { getUpdateGoogleBooks } from '../../features/googleBooks/googleBooks';
 
 const Books: React.FC<CardsProps> = ({ books }) => {
 
-  const favoriteGoogleBooks = useSelector(getUpdateGoogleBooks)
+  const favoriteGoogleBooks = useSelector(getUpdateGoogleBooks);
   const [filters, setFilters] = useState<string | boolean>("any");
   const [filteredBooks, setFillteredBooks] = useState(favoriteGoogleBooks)
 
@@ -33,7 +33,6 @@ const Books: React.FC<CardsProps> = ({ books }) => {
 
   return (
     <Container>
-      <Header />
       <Filter filters={filters} setFilters={setFilters} />
       {filters === "any"
         ? <Cards books={favoriteGoogleBooks} />

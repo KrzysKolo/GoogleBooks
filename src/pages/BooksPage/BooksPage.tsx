@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Books } from '../../components';
+import { Books, Header, Loading, Page404 } from '../../components';
 import { Wrapper } from './BooksPage.styles';
 import { BookInterface } from '../../models/BookInterface'
-import { getAllGoogleBooksApi } from '../../features/googleBooksAPI/googleBooksApiSlice';
+import { getAllGoogleBooksApi, isError, isLoading } from '../../features/googleBooksAPI/googleBooksApiSlice';
 import { getAllGoogleBooks, getGoogleBooks } from '../../features/googleBooks/googleBooks';
 
 const BooksPage: React.FC = () => {
@@ -11,6 +11,8 @@ const BooksPage: React.FC = () => {
   const tab: BookInterface[] = []
   const booksGoogleApi = useSelector(getAllGoogleBooksApi)
   const booksGoogle = useSelector(getAllGoogleBooks);
+  const LoadingBooks = useSelector(isLoading);
+  const Error = useSelector(isError);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -49,7 +51,10 @@ const BooksPage: React.FC = () => {
 
   return (
     <Wrapper>
-      <Books books={booksGoogle} />
+      <Header />
+      { LoadingBooks ? <Loading /> : <Books books={booksGoogle} />}
+      { Error !== "" && <Page404 />}
+
     </Wrapper>
   )
 }

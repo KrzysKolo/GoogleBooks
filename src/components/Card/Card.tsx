@@ -38,7 +38,8 @@ const Card: React.FC<CardBookProps> = ({ book }) => {
  };
 
   return (
-    <Container data-aos="flip-left"
+    <Container
+      data-aos="flip-left"
       data-aos-easing="ease-out-cubic"
       data-aos-duration="1500">
       { favorite
@@ -71,10 +72,7 @@ const Card: React.FC<CardBookProps> = ({ book }) => {
       }
       <WrapperInfoBookDiv>
         <ImageDiv>
-          { book.image
-            ? <ImageImg src={book.image} alt={book.title} />
-            : <ImageImg src='https://cdn.pixabay.com/photo/2013/07/12/14/07/student-147783__340.png' alt="brak oficjalnego zdjecia" />
-          }
+          <ImageImg src={book.image} alt={book.title} />
         </ImageDiv>
         <InfoDiv>
           <InfoH2>{book.authors}</InfoH2>
