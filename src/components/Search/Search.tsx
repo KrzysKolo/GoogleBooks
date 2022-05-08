@@ -34,10 +34,6 @@ const Search: React.FC = () => {
   };
 
   const fetchBooks = async () => {
-    /*  await axios.get(`${apiUrl}?q=${value}&key=${keyGoogle}`)
-    .then(res => {
-    dispatch(getGoogleBooksAPI(res.data.items))
-  }) */
    try {
         console.log(`${apiUrl}?q=${value}&key=${keyGoogle}&maxResults=20&langRestrict=${valueRadio}`)
         const books = await axios.get(`${apiUrl}?q=${value}&key=${keyGoogle}&maxResults=20&langRestrict=${valueRadio}`)
@@ -49,22 +45,7 @@ const Search: React.FC = () => {
         dispatch(setError('Oops! Something went wrong!'));
         dispatch(setLoading(false));
       }
-  }
-
-
-
-/*   const fetchBooks = createAsyncThunk(
-    'books/getGoogleBooksAPI',
-    async (name, thunkAPI) => {
-    await axios.get(`${apiUrl}?q=${value}&key=${keyGoogle}&maxResults=20&langRestrict=${language}`)
-      .then(res => {
-        dispatch(getGoogleBooksAPI(res.data.items));
-      })
-      .catch( error => {
-        return thunkAPI.rejectWithValue('something went wrong');
-      })
     }
-  ); */
 
   return (
      <Container>

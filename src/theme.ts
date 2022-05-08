@@ -9,6 +9,7 @@ export const theme = {
     lightGrey: '#ccc',
     formBar: '#dcd6cc',
     grey: '#7d7d7d',
+
   },
   font: {
     size: {

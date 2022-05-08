@@ -1,3 +1,4 @@
+import PaletColors from '../../assets/colors/PaletColors';
 
 export const theme = {
   color: {
@@ -10,6 +11,10 @@ export const theme = {
     lightGrey: '#ccc',
     formBar: '#dcd6cc',
     grey: '#cc8e35',
+    navy: `${PaletColors["navy"]}`,
+    white100: '#fefefe',
+    swanWhite: `${PaletColors["swan white"]}`,
+    greyPorcelain: `${PaletColors["grey porcelain"]}`,
   },
   font: {
     size: {

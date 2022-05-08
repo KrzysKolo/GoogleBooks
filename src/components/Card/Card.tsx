@@ -80,7 +80,6 @@ const Card: React.FC<CardBookProps> = ({ book }) => {
           <InfoP>
             {`${book.description}`.length <= 200 ? `${book.description}` : `${book.description.substring(0, 200)} ...`}
           </InfoP>
-
         </InfoDiv>
       </WrapperInfoBookDiv>
     </Container>
