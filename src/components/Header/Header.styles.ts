@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import PaletColors from '../../assets/colors/PaletColors';
 import img2 from '../../assets/images/ksiazki2.png';
 import img3 from '../../assets/images/ksiazki3.png';
 

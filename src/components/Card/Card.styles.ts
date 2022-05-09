@@ -6,12 +6,12 @@ export const Container = styled.article`
   margin: 0;
   padding: 0;
   box-sizing: border-box ;
-  background-color: ${PaletColors["swan white"]};
-  border: 2px solid ${PaletColors["jackson purple"]};
+  background-color: ${({ theme }) => theme.color.swanWhite};
+  border: 2px solid ${({ theme }) => theme.color.greyPorcelain};;
   border-radius: 10px;
-  box-shadow: 3px 3px 5px ${PaletColors["grey porcelain"]};
-  height: 300px;
-  width: 480px;
+  box-shadow: 3px 3px 5px ${({ theme }) => theme.color.greyPorcelain};;
+  height: 250px;
+  width: 400px;
   margin-bottom: 5vh;
   overflow: hidden;
   display: flex;
@@ -20,27 +20,28 @@ export const Container = styled.article`
   justify-self: center;
 `;
 export const HeaderDiv = styled.div`
-  background-color: ${PaletColors["synthetic pumpkin"]};
-  border-bottom: 1px solid ${PaletColors["grey porcelain"]};
-  box-shadow: 0px 2px 3px ${PaletColors["grey porcelain"]};
+  background-color: ${({ theme }) => theme.color.orange};;
+  border-bottom: 1px solid ${({ theme }) => theme.color.greyPorcelain};;
+  box-shadow: 0px 2px 3px ${({ theme }) => theme.color.greyPorcelain};;
   border-radius: 10px 10px 0 0 ;
-  color: ${PaletColors["lucky point"]};
+  color: ${({ theme }) => theme.color.navy};;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 11vh;
+  height: 8vh;
   width: 100%;
   margin: 0;
   position: relative;
 `;
 export const HeaderDiv2 = styled(HeaderDiv)`
-  background-color: ${PaletColors["swan white"]};
+  background-color: ${({ theme }) => theme.color.swanWhite};;
 `;
 export const HeaderH1 = styled.h1`
-  font-family: 'Kodchasan', sans-serif;
-  font-size: 1.1rem;
+  font-family: ${({ theme }) => theme.font.family.kodchasan};;
+  font-size: 1.7rem;
   width: calc(100% - 8vh);
+  padding: 8px 5px ;
 `;
 export const HeaderFavoriteBookButton = styled.button`
   background-color: transparent;
@@ -70,6 +71,8 @@ export const WrapperInfoBookDiv = styled.div`
   display: flex;
   align-items: center;
   margin-top: 12px;
+  overflow: hidden ;
+  object-fit: cover;
 `;
 export const ImageDiv = styled.div`
   margin: 0 1rem;
@@ -92,13 +95,13 @@ export const InfoDiv = styled.div`
   align-items: flex-start;
 `;
 export const InfoH2 = styled.h2`
-  font-size: 1rem;
+  font-size: 1.7rem;
   font-weight: 600;
   margin: 0.3rem 0;
 `;
 export const InfoP = styled.p`
   font-weight: 400;
-  font-size: 0.9em;
+  font-size: 1.4rem;
   margin: 0.3rem 0;
   text-align: left;
 `;

@@ -5,16 +5,13 @@ export const theme = {
     white: '#ffffff',
     beige: '#f9f7f4',
     black: '#000000',
-    red: '#ff0000',
-    darkBrown: '#2c2726',
-    lightBrown: '#817f75',
-    lightGrey: '#ccc',
-    formBar: '#dcd6cc',
+    orange: '#ffb142',
     grey: '#cc8e35',
     navy: `${PaletColors["navy"]}`,
     white100: '#fefefe',
     swanWhite: `${PaletColors["swan white"]}`,
     greyPorcelain: `${PaletColors["grey porcelain"]}`,
+    syntheticPumpkin: `${PaletColors["synthetic pumpkin"]}`,
   },
   font: {
     size: {
@@ -27,10 +24,11 @@ export const theme = {
     family: {
       lato: 'Lato, sans-serif',
       cinzel: 'Cinzel, serif',
+      kodchasan: 'Kodchasan, sans-serif',
     },
   },
   mq: {
-    phone: '@media (min-width: 270px)',
+    phone: '@media (min-width: 412px)',
     tablet: '@media (min-width: 768px)',
     desktop: '@media (min-width: 960px)',
     bigDesktop: '@media (min-width: 1235px)',

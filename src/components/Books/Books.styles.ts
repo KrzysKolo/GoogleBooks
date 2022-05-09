@@ -8,7 +8,6 @@ export const Container = styled.section`
 
   ${({ theme }) => theme.mq.desktop} {
    max-width: 100%
-   background: orange ;
-  }
+   }
 `;
 

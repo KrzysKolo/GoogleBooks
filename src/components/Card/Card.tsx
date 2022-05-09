@@ -46,7 +46,7 @@ const Card: React.FC<CardBookProps> = ({ book }) => {
         ? (
           <HeaderDiv >
             <HeaderH1>
-              {book.title}
+            {`${book.title}`.length <= 100 ? `${book.title}` : `${book.title.substring(0, 100)} ...`}
             </HeaderH1>
             <HeaderFavoriteBookButton onClick={toggleFavoured}>
               { favorite
@@ -59,7 +59,7 @@ const Card: React.FC<CardBookProps> = ({ book }) => {
         : (
           <HeaderDiv2 >
             <HeaderH1>
-              {book.title}
+            {`${book.title}`.length <= 100 ? `${book.title}` : `${book.title.substring(0, 100)} ...`}
             </HeaderH1>
             <HeaderFavoriteBookButton onClick={toggleFavoured}  >
               { favorite

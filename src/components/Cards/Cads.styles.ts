@@ -12,19 +12,19 @@ export const Container = styled.section`
 }
 ${({ theme }) => theme.mq.tablet} {
   display: grid;
-  grid-template-columns: repeat(2, 475px);
+  grid-template-columns: 1fr;
   align-self: stretch;
   justify-self: stretch;
 }
 ${({ theme }) => theme.mq.desktop} { {
     display: grid;
-    grid-template-columns: repeat(2, 505px);
+    grid-template-columns: repeat(2, 435px);
     align-self: stretch;
     justify-self: stretch;
 }
 ${({ theme }) => theme.mq.bigDesktop} { {
     display: grid;
-    grid-template-columns: repeat(3, 505px);
+    grid-template-columns: repeat(3, 425px);
     align-self: stretch;
     justify-self: stretch;
 }
