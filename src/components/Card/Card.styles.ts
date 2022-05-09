@@ -64,7 +64,7 @@ export const HeaderFavoriteBookButton = styled.button`
   }
 `;
 export const HeaderFavoriteBookImg = styled.img`
-  width: 75%;
+  width: 55%;
   background-color: transparent;
 `;
 export const WrapperInfoBookDiv = styled.div`

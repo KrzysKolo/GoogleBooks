@@ -17,8 +17,9 @@ export const Container = styled.section`
   > select {
     border-radius: 5px;
     font-size: 1.8rem;
+    height: 46px;
     margin: 10px:
-    padding: 15px;
+    padding: 25px;
     width: 150px;
     > .option {
       font-size: 1.8rem;
@@ -32,7 +33,6 @@ export const Container = styled.section`
    };
 
   ${({ theme }) => theme.mq.desktop} {
-    background: orange ;
     max-width: 100%
   };
 `;
