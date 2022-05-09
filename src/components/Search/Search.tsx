@@ -6,6 +6,7 @@ import photo from '../../assets/svgs/search.png';
 import { AppDispatch } from '../../app/store';
 import axios from 'axios';
 import { apiUrl, keyGoogle } from '../../api/booksApi';
+import { ButtonSquare } from '../Buttons';
 
 
 
@@ -57,9 +58,7 @@ const Search: React.FC = () => {
           placeholder='Search'
           onChange={handleChange}
         />
-        <SearchButton onClick={handleClick}>
-          <ImgButton src={photo} />
-        </SearchButton>
+       <ButtonSquare photo={photo} onClick={handleClick} alternativeText='search button' />
        </WrapperSearch>
        <WrapperRadio onChange={handleChangeRadioButton}>
         <InputRadio type="radio" value="pl" name="language" onChange={handleChangeRadioButton}/> Polish

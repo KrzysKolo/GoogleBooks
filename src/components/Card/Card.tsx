@@ -6,8 +6,6 @@ import {
   HeaderDiv,
   HeaderDiv2,
   HeaderH1,
-  HeaderFavoriteBookButton,
-  HeaderFavoriteBookImg,
   WrapperInfoBookDiv,
   ImageDiv,
   ImageImg,
@@ -15,6 +13,7 @@ import {
   InfoH2,
   InfoP
 } from './Card.styles';
+import { ButtonChangeFavoriteBook } from '../Buttons';
 import heartFilled from '../../assets/svgs/icons8-heart-24.png';
 import heartOutlined from '../../assets/svgs/icons8-favorite-32.png';
 import 'aos';
@@ -43,27 +42,23 @@ const Card: React.FC<CardBookProps> = ({ book }) => {
         ? (
           <HeaderDiv >
             <HeaderH1>
-            {`${book.title}`.length <= 100 ? `${book.title}` : `${book.title.substring(0, 100)} ...`}
+            { `${book.title}`.length <= 50 ? `${book.title}` : `${book.title.substring(0, 50)} ...`}
             </HeaderH1>
-            <HeaderFavoriteBookButton onClick={toggleFavoured}>
-              { favorite
-                ? (<HeaderFavoriteBookImg src={heartFilled} alt='filled heard' />)
-                : (<HeaderFavoriteBookImg src={heartOutlined} alt='outlined heart' />)
-              }
-            </HeaderFavoriteBookButton>
+            { favorite
+                ? (<ButtonChangeFavoriteBook photo={heartFilled} alternativeText='filled heard' onClick={toggleFavoured} />)
+                : (<ButtonChangeFavoriteBook photo={heartOutlined} alternativeText='outlined heart' onClick={toggleFavoured} />)
+            }
           </HeaderDiv>
           )
         : (
           <HeaderDiv2 >
             <HeaderH1>
-            { `${book.title}`.length <= 100 ? `${book.title}` : `${book.title.substring(0, 100)} ...`}
+            { `${book.title}`.length <= 50 ? `${book.title}` : `${book.title.substring(0, 50)} ...`}
             </HeaderH1>
-            <HeaderFavoriteBookButton onClick={toggleFavoured}  >
-              { favorite
-                ? (<HeaderFavoriteBookImg src={heartFilled} alt='filled heard' />)
-                : (<HeaderFavoriteBookImg src={heartOutlined} alt='outlined heart' />)
-              }
-            </HeaderFavoriteBookButton>
+            { favorite
+                ? (<ButtonChangeFavoriteBook photo={heartFilled} alternativeText='filled heard' onClick={toggleFavoured} />)
+                : (<ButtonChangeFavoriteBook photo={heartOutlined} alternativeText='outlined heart' onClick={toggleFavoured} />)
+            }
           </HeaderDiv2>
         )
       }

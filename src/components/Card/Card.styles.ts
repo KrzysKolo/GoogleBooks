@@ -1,4 +1,3 @@
-
 import styled from 'styled-components';
 import PaletColors from '../../assets/colors/PaletColors';
 
@@ -42,30 +41,6 @@ export const HeaderH1 = styled.h1`
   font-size: 1.7rem;
   width: calc(100% - 8vh);
   padding: 8px 5px ;
-`;
-export const HeaderFavoriteBookButton = styled.button`
-  background-color: transparent;
-  margin-top: 1rem;
-  width: 7vh;
-  height: 7vh;
-  border-radius: 50%;
-  position: absolute;
-  right: 0;
-  margin: 0 0.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  transform: scale(1);
-  transition: all 0.3s easy-in-out;
-  &:hover{
-    transform: scale(1.2)
-  }
-`;
-export const HeaderFavoriteBookImg = styled.img`
-  width: 55%;
-  background-color: transparent;
 `;
 export const WrapperInfoBookDiv = styled.div`
   display: flex;

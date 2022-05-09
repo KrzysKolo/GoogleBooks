@@ -17,7 +17,7 @@ export const Container = styled.section`
   > select {
     border-radius: 5px;
     font-size: 1.8rem;
-    height: 46px;
+    height: 42px;
     margin: 10px:
     padding: 25px;
     width: 150px;
