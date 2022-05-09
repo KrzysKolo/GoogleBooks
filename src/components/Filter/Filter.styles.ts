@@ -13,7 +13,7 @@ export const Container = styled.section`
     font-size: 1.8rem;
     font-weight: 700;
     margin: 0 1rem;
-  }
+  };
   > select {
     border-radius: 5px;
     font-size: 1.8rem;
@@ -24,15 +24,15 @@ export const Container = styled.section`
       font-size: 1.8rem;
       margin: 10px:
       padding: 15px;
-    }
-  }
+    };
+  };
+
   ${({ theme }) => theme.mq.phone} {
     max-width: 100%;
    };
 
   ${({ theme }) => theme.mq.desktop} {
-   max-width: 100%
-   background: orange ;
-  }
-
+    background: orange ;
+    max-width: 100%
+  };
 `;

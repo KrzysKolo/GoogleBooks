@@ -2,11 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Container } from './Books.styles';
 import { Filter, Cards } from './../';
 import { CardsProps } from '../../models/CardsProps';
-import { Header } from './../';
-import { changeFavoriteBook } from '../../features/favoriteBooks/favoriteBooksSlice';
 import { useSelector } from 'react-redux';
 import { getUpdateGoogleBooks } from '../../features/googleBooks/googleBooks';
-
 
 const Books: React.FC<CardsProps> = ({ books }) => {
 
@@ -34,7 +31,7 @@ const Books: React.FC<CardsProps> = ({ books }) => {
   return (
     <Container>
       <Filter filters={filters} setFilters={setFilters} />
-      {filters === "any"
+      { filters === "any"
         ? <Cards books={favoriteGoogleBooks} />
         : <Cards books={filteredBooks} /> }
     </Container>

@@ -7,6 +7,7 @@ export const Container = styled.section`
   flex-direction: column;
   height: 12vh;
   width: 100%;
+
   ${({ theme }) => theme.mq.phone} {
    padding: 5px;
   };
@@ -14,7 +15,6 @@ export const Container = styled.section`
 export const WrapperSearch = styled.div`
   display: flex;
   padding: 5px;
- ;
 `;
 export const WrapperRadio = styled(WrapperSearch)`
   align-items: center;
@@ -23,9 +23,9 @@ export const WrapperRadio = styled(WrapperSearch)`
 export const SearchInput = styled.input`
   background: ${({ theme }) => theme.color.swanWhite};
   border-radius: 0.3rem;
-  border: ${PaletColors["devil blue"]} 1px solid;
-  box-shadow: inset -2px -1px 7px ${PaletColors["grey porcelain"]}};
-  color: ${PaletColors["devil blue"]};
+  border: 1px solid  ${({ theme }) => theme.color.navy};;
+  box-shadow: inset -2px -1px 7px ${({ theme }) => theme.color.greyPorcelain};
+  color:  ${({ theme }) => theme.color.navy};
   font-size: 15px;
   height: 50px;
   padding: 5px 10px 5px 5px;
@@ -39,7 +39,7 @@ export const SearchInput = styled.input`
 
   ${({ theme }) => theme.mq.desktop} {
     max-width: 35rem;
-  }
+  };
 `;
 export const SearchButton = styled.button`
   align-items: center;

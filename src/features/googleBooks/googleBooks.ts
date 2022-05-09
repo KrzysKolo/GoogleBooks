@@ -1,8 +1,7 @@
 /* dane wykorzystywane w aplikacji */
 
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import GoogleBook from '../../api/google';
-import { RootState, AppThunk } from '../../app/store';
+import {  createSlice } from '@reduxjs/toolkit';
+import { RootState } from '../../app/store';
 import { BookInterface } from '../../models/BookInterface';
 
 export type googleBooksType = {

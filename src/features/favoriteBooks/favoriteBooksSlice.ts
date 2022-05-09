@@ -1,13 +1,14 @@
 
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState, AppThunk } from '../../app/store';
+import { createSlice } from '@reduxjs/toolkit';
+import { RootState, } from '../../app/store';
 
 export type favoriteBooksType = {
   isFavorite: boolean;
-}
-const initialState: favoriteBooksType  = {
+};
+
+const initialState: favoriteBooksType = {
   isFavorite: false,
-}
+};
 
 const favoriteBooksSlice = createSlice({
   name: 'favoriteBooks',

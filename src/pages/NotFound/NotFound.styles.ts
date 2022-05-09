@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  max-width: 70vw;
-  height: 50vh;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  height: 50vh;
   justify-content: center;
-  align-items: center;
+  max-width: 70vw;
 `;
 export const ErrorDiv = styled.div`
-  width: 15vw;
   object-fit: cover;
+  width: 15vw;
 `;
 export const ErrorImg = styled.img`
   width: 100%;

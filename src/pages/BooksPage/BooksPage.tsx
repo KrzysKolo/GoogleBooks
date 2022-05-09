@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Books, Header, Loading, Page404 } from '../../components';
 import { Wrapper } from './BooksPage.styles';
@@ -16,7 +16,6 @@ const BooksPage: React.FC = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // eslint-disable-next-line array-callback-return
     booksGoogleApi.map((item) => {
       const book = {
         id: item.id,
@@ -43,9 +42,11 @@ const BooksPage: React.FC = () => {
             description: item.volumeInfo.description,
             favoriteBook: false,
           }
-          )
-        } else { tab.push(book)}
-    })
+         )
+       } else {
+         tab.push(book)
+       }
+      })
     dispatch(getGoogleBooks(tab));
   }, [booksGoogleApi]);
 
@@ -54,7 +55,6 @@ const BooksPage: React.FC = () => {
       <Header />
       { LoadingBooks ? <Loading /> : <Books books={booksGoogle} />}
       { Error !== "" && <Page404 />}
-
     </Wrapper>
   )
 }

@@ -87,7 +87,7 @@ export const WrapperRight = styled.div`
     height: 100% ;
     justify-content: center;
     width: 100%;
-  }
+  };
 `;
 export const TextH1 = styled.h1`
   color: ${({ theme }) => theme.color.swanWhite};

@@ -1,9 +1,7 @@
 /* pobieranie danych z API */
 
-import { AnyAction, createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import { apiUrl, keyGoogle } from '../../api/booksApi';
 import GoogleBook from '../../api/google';
 import { RootState } from '../../app/store';
@@ -23,22 +21,6 @@ const initialState: googleBooksApiType = {
   isLoading: false,
   isError: '',
 };
-
-export const fetchBooks = createAsyncThunk(
-
-  'googleBooksApi/fetchBooks',
-  async (phrase, thunkAPI) => {
-    try {
-       const books = await axios.get(`${apiUrl}?q=cat&key=${keyGoogle}&maxResults=20`)
-         console.log(books);
-         return books.data.items;
-     }
-    catch( error) {
-      return thunkAPI.rejectWithValue('something went wrong');
-    }
-  }
-
-);
 
 const googleBooksApiSlice = createSlice({
   name: 'googleBooksApi',
