@@ -19,6 +19,6 @@ To get a local copy up and running follow these steps.
 Clone the repo
 https://github.com/KrzysKolo/GoogleBooks.git <br><br>
 Install NPM packages <br>
-<b> npm install </b> <br>
-Start the project <br><br>
+<b> npm install </b> <br><br>
+Start the project <br>
 <b> yarn start </b>
