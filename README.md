@@ -17,8 +17,8 @@ To test the applications <a target="_blank" href="http://web-projekt-1.net.pl/">
 To get a local copy up and running follow these steps.
 
 Clone the repo
-https://github.com/KrzysKolo/GoogleBooks.git
+https://github.com/KrzysKolo/GoogleBooks.git <br>
 Install NPM packages
-npm install
+npm install <br>
 Start the project
 yarn start
