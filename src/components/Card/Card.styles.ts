@@ -33,15 +33,18 @@ export const HeaderDiv = styled.div`
   margin: 0;
   position: relative;
 `;
+
 export const HeaderDiv2 = styled(HeaderDiv)`
   background-color: ${({ theme }) => theme.color.swanWhite};;
 `;
+
 export const HeaderH1 = styled.h1`
   font-family: ${({ theme }) => theme.font.family.kodchasan};;
   font-size: 1.7rem;
   width: calc(100% - 8vh);
   padding: 8px 5px ;
 `;
+
 export const WrapperInfoBookDiv = styled.div`
   display: flex;
   align-items: center;
@@ -62,6 +65,7 @@ export const ImageImg = styled.img`
   height: 100%;
   object-fit: cover;
 `;
+
 export const InfoDiv = styled.div`
   padding: 0.5rem;
   margin: 0.75rem;
@@ -69,6 +73,7 @@ export const InfoDiv = styled.div`
   flex-direction: column;
   align-items: flex-start;
 `;
+
 export const InfoH2 = styled.h2`
   font-size: 1.7rem;
   font-weight: 600;

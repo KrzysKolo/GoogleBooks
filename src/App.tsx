@@ -6,9 +6,6 @@ import { theme } from './assets/styles/theme';
 import { GlobalStyle } from './assets/styles/GlobalStyles';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { NotFound } from './pages';
-;
-
-
 
 function App() {
   return (

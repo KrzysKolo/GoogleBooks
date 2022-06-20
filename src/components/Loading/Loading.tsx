@@ -1,6 +1,5 @@
 import React from 'react'
 import Loader from 'react-ts-loaders/dist';
-
 import { Container } from './Loading.styles';
 
 const Loading: React.FC = () => {

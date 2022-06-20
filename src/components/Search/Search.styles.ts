@@ -7,19 +7,21 @@ export const Container = styled.section`
   flex-direction: column;
   height: 12vh;
   width: 100%;
-
   ${({ theme }) => theme.mq.phone} {
    padding: 5px;
   };
 `;
+
 export const WrapperSearch = styled.div`
   display: flex;
   padding: 5px;
 `;
+
 export const WrapperRadio = styled(WrapperSearch)`
   align-items: center;
   display: flex ;
 `;
+
 export const SearchInput = styled.input`
   background: ${({ theme }) => theme.color.swanWhite};
   border-radius: 0.3rem;

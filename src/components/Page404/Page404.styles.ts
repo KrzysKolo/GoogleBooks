@@ -8,13 +8,16 @@ export const Container = styled.section`
   justify-content: center;
   max-width: 70vw;
 `;
+
 export const ErrorDiv = styled.div`
   object-fit: cover;
   width: 15vw;
 `;
+
 export const ErrorImg = styled.img`
   width: 100%;
 `;
+
 export const ErrorP = styled.p`
   color: ${({ theme }) => theme.color.black};
   font-size: ${({ theme }) => theme.font.size.l} ;

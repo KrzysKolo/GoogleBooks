@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { BookInterface } from '../../models/BookInterface';
 import {
   Container,
   HeaderDiv,

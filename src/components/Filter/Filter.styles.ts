@@ -27,11 +27,9 @@ export const Container = styled.section`
       padding: 15px;
     };
   };
-
   ${({ theme }) => theme.mq.phone} {
     max-width: 100%;
    };
-
   ${({ theme }) => theme.mq.desktop} {
     max-width: 100%
   };

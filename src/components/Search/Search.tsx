@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { Container, SearchInput, SearchButton, ImgButton, WrapperSearch, WrapperRadio, InputRadio } from './Search.styles';
+import { Container, SearchInput, WrapperSearch, WrapperRadio, InputRadio } from './Search.styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { addLanguage, addLanguageBook, addPhrase, addPhraseBook, getGoogleBooksAPI, setError, setLoading } from '../../features/googleBooksAPI/googleBooksApiSlice';
 import photo from '../../assets/svgs/search.png';
-import { AppDispatch } from '../../app/store';
 import axios from 'axios';
 import { apiUrl, keyGoogle } from '../../api/booksApi';
 import { ButtonSquare } from '../Buttons';
-
-
 
 const Search: React.FC = () => {
 
@@ -59,12 +56,12 @@ const Search: React.FC = () => {
           onChange={handleChange}
         />
        <ButtonSquare photo={photo} onClick={handleClick} alternativeText='search button' />
-       </WrapperSearch>
-       <WrapperRadio onChange={handleChangeRadioButton}>
+      </WrapperSearch>
+      <WrapperRadio onChange={handleChangeRadioButton}>
         <InputRadio type="radio" value="pl" name="language" onChange={handleChangeRadioButton}/> Polish
         <InputRadio type="radio" value="en" name="language"  onChange={handleChangeRadioButton} /> English
-       </WrapperRadio>
-     </Container>
+      </WrapperRadio>
+    </Container>
   )
 }
 

@@ -10,6 +10,7 @@ export const Container = styled.button`
   justify-content: center;
   width: 50px;
 `;
+
 export const ImgButton = styled.img`
   transform: scale(1);
   transition: all 0.3ms easy-in-out;
